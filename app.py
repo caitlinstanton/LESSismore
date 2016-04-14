@@ -7,7 +7,7 @@ def home():
     """
     The main page of the website. Enter questions here.
     """
-    return "Hello world"
+    return "Hello world!"
 
 if __name__=="__main__":
     app.debug = True
