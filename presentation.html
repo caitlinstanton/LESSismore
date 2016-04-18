@@ -9,7 +9,7 @@
 
 <h2>Variables</h2>
 <ul>
-<li>Defined using ‘@name: value’</li>
+<li>Defined using '@name: value'</li>
 <li>Store a value so variable can be used instead of the value itself</li>
 <li>Helps keep track of values easily so that they can be changed later without difficulty</li>
 <li><b>Variable Scope</b>
@@ -18,8 +18,29 @@
 <li>Variables can also be used to define other variables</li>
 </ul></li>
 <li><b>Manipulating Variables</b>: Operations can be used to change the value of variables
-<li>
+</ul>
 
+<h2>Nesting and Mixins</h2>
+<ul>
+<li><b>Nesting CSS Rules</b>
+<ul>
+<li>Can write specific CSS rules within each other, so that they only apply to a certain section</li>
+<li>Gets rid of the cascading style of CSS, as well as the need to rewrite classes, IDs, etc.</li>
+</ul></li>
+<li><b>Mixins</b>
+<ul>
+<li>Can add properties from other CSS rules to a CSS rule, saving you typing</li>
+<li>Parametric mixins: Mixins can also take in multiple variables to change how they properties work when being called in different CSS rules</li>
+<li>Can be given a default; still allows you to change the parameter of the mixin</li>
+</ul>
+</ul>
+
+<h2>Using LESS</h2>
+<ul>
+<li>Download less.js file from http://lesscss.org/</li>
+<li>Insert the less.js file &lt;script src="less.js" type="text/javascript">&lt;script></li>
+<li>Create a .less file and link it to your page &lt;link rel="stylesheet/less" type="text/css" href="style.less"></li>
+<li>For production, it is recommended to use node.js or another third-party client to compile beforehand</li>
 </ul>
 
 </html>
