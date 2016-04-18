@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Half Slider - Start Bootstrap Template</title>
+    <title>LESS is More</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +27,15 @@
 </head>
 
 <body>
+
+<style>
+body {
+    text-align: center;
+}
+li {
+    list-style-type: none;
+}
+</style>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -120,51 +129,127 @@
     <div class="container">
 
         <div class="row" id="about">
-            <div class="col-lg-12">
-                <h1>What is</h1><h1><i>LESS?<i></h1>
-                Dynamic stylesheet language
-                Can be described as a superset of CSS
-                Adds variables, operations, function-like elements, and JavaScript to already existing CSS syntax
+            <div class="col-lg-12" >
+                <div style="text-align: center;">
+                    <h1>What is</h1><h1><i>LESS?</i></h1>
+                </div>
+                Less is a dynamic stylesheet language that can be described as a superset of CSS. <br> It dds variables, operations, function-like elements, and JavaScript to already existing CSS syntax, to make the creation of an aesthetic product more logical and less time-consuming.
+            </div>
+        </div>
 
-                <h2>Variables</h2>
+        <div class="row" id="history">
+            <div class="col-lg-12" >
+                <div style="text-align: center;">
+                    <h1>The History of LESS</h1>
+                </div>
+                It was created in 2009 by Alexis Seller. It incorporates influences from Sass and CSS, based mainly on the syntax of those two technologies, and was originally written in Ruby. It was eventually ported to JavaScript.
+                <br>
+                In May of 2012, it was handed over to a team of contributors and developers. Its iterations have, in turn, influenced Sass, the LESS framework, and Bootstrap.
+            </div>
+        </div>
+
+        <div class="row" id="variables">
+            <div style="text-align: center;">
+                <h1>Variables</h1>
+            </div>
                 <ul>
                 <li>Defined using '@name: value'</li>
                 <li>Store a value so variable can be used instead of the value itself</li>
                 <li>Helps keep track of values easily so that they can be changed later without difficulty</li>
-                <li><b>Variable Scope</b>
+                </ul>
+            <div style="text-align: center;">
+                <h2>Variable Scope</h2>
+            </div>
                 <ul>
                 <li>Variables can be defined inside and outside CSS rules</li>
                 <li>Variables can also be used to define other variables</li>
-                </ul></li>
-                <li><b>Manipulating Variables</b>: Operations can be used to change the value of variables
+                </ul>
+            <div style="text-align: center;">
+                <h2>Manipulating Variables</h2>
+            </div>
+                <ul>
+                <li>Operations can be used to change the value of variables</li>
                 </ul>
                 <img src="static/image1.png"><br>
                 Example of variables in LESS
+        </div>
 
-                <h2>Nesting and Mixins</h2>
-                <ul>
-                <li><b>Nesting CSS Rules</b>
+        <div class="row" id="nesting">
+            <div style="text-align: center;">
+                <h1>Nesting</h1>
+            </div>
                 <ul>
                 <li>Can write specific CSS rules within each other, so that they only apply to a certain section</li>
                 <li>Gets rid of the cascading style of CSS, as well as the need to rewrite classes, IDs, etc.</li>
-                </ul></li>
-                <li><b>Mixins</b>
-                <ul>
-                <li>Can add properties from other CSS rules to a CSS rule, saving you typing</li>
-                <li>Parametric mixins: Mixins can also take in multiple variables to change how they properties work when being called in different CSS rules</li>
-                <li>Can be given a default; still allows you to change the parameter of the mixin</li>
-                </ul>
                 </ul>
                 <img src="static/image2.png"><br>
                 Example of nesting in LESS<br>
+        </div>
+
+        <div class="row" id="mixins">
+            <div style="text-align: center;">
+                <h1>Mixins</h1>
+            </div>
+                <ul>
+                <li>Can add properties from other CSS rules to a CSS rule, saving you typing</li>
+                <li><b>Parametric mixins:</b> Mixins can also take in multiple variables to change how they properties work when being called in different CSS rules</li>
+                <li>Can be given a default; still allows you to change the parameter of the mixin</li>
+                </ul>
                 <img src="static/image3.png"><br>
                 Example of mixins in LESS
+        </div>
 
-                <h2>Using LESS</h2>
+        <div class="row" id="additional">
+            <div style="text-align: center;">
+                <h1>Additional Features</h1>
+            </div>
+            <div style="text-align: center;">
+                <h2>Importing Files</h2>
+            </div>
+            <ul>
+                <li>Can import other files to use variables and mixins from those files</li>
+                <li>Can use reference to avoid outputting content of variables and mixins</li>
+                <li>Done using <br><code>@import (reference) "file_name";</code></li>
+            </ul>
+            <div style="text-align: center;">
+                <h2>Extending</h2>
+            </div>
+            <ul>
+                <li>Used to reduce redundant code</li>
+                <li>Uses same rules for a different mixin or variable</li>
+                <li>Similar to classes and subclasses in Java</li>
+                <li>Done using<br><code>&:extend(.external_class);</code></li>
+            </ul>
+            <div style="text-align: center;">
+                <h2>Merging Property</h2>
+            </div>
                 <ul>
-                <li>Download less.js file from http://lesscss.org/</li>
-                <li>Insert the less.js file &lt;script src="less.js" type="text/javascript">&lt;script></li>
-                <li>Create a .less file and link it to your page &lt;link rel="stylesheet/less" type="text/css" href="style.less"></li>
+                    <li>Used for CSS properties that accept multiple values</li>
+                    <li>Merge values that belong to the same property</li>
+                    <li>Add properties from another class by writing it as a rule in the general rule:
+                    <br>
+                    <code>
+                    .inner-shadow {
+                        box-shadow: inset 10px 10px 5px #ccc;
+                    }
+                    <br>
+                    .box {
+                        .inner-shadow;
+                    }
+                    </code>
+                    </li>
+                </ul>
+        </div>
+
+        <div class="row" id="using">
+            <div style="text-align: center;">
+                <h1>Using LESS</h1>
+            </div>
+                <ul>
+                <li>Download less.js file from <a href="https://lesscss.org/">the LESS website</a></li>
+                <li>Insert the less.js file <code>< script src="less.js" type="text/javascript">< /script></code></li>
+                <li>Create a .less file and link it to your page <br>
+                <code>&lt;link rel="stylesheet/less" type="text/css" href="style.less"></code></li>
                 <li>For production, it is recommended to use node.js or another third-party client to compile beforehand</li>
                 </ul>
             </div>
@@ -176,7 +261,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Caitlin Stanton, Winton Yee, Jeffrey Zou</p>
                 </div>
             </div>
             <!-- /.row -->
